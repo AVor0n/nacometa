@@ -3,6 +3,7 @@
 @import './components/container';
 
 .header {
+    box-sizing: border-box;
     background: url("../assets/img/hero-back.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,7 +73,7 @@
         }
     }
 
-    &__login-btn{
+    &__login-btn {
         // вынести в Icon component
         background-color: transparent;
         background-image: url("../assets/svg/user.svg");
@@ -102,4 +103,145 @@
     background: transparent;
     border: 1px solid #FFFFFF;
     cursor: pointer;
+}
+
+.section {
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 0.2px;
+        color: #000000;
+    }
+}
+
+.leads {
+    padding: 50px 140px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__dream-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+.dream-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    filter: drop-shadow(0px 24px 32px rgba(50, 50, 71, 0.05));
+    transition: 500ms;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        filter: drop-shadow(0px 24px 32px rgba(50, 50, 71, 0.25));
+    }
+
+    &__content {
+        padding: 10px 20px 20px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__title {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    &__progress {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__update-text {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
+    }
+
+    &__progress-current {
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(0deg, #03BAFE, #03BAFE), linear-gradient(0deg, #F7EFEF, #F7EFEF), #F7EFEF;
+        border-radius: 10px;
+    }
+
+    &__progress-all {
+        height: 5px;
+        width: 100%;
+        background: rgba(3, 186, 254, 0.2);
+        border-radius: 10px;
+    }
+
+    &__progress-current-text {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    &__progress-all-text {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
+    }
+}
+
+.slogan {
+    background: rgba(235, 250, 255, 0.7);
+    border-radius: 20px;
+    margin: 0 140px;
+
+    &__text {
+        padding: 45px 10px;
+        text-align: center;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+        background: linear-gradient(180deg, #03BAFE 0%, #0068FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 }
