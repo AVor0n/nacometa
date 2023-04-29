@@ -1,0 +1,73 @@
+.btn {
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    // colors
+    &--primary {
+        background: #03BAFE;
+        color: white;
+
+        &:hover {
+            background-color: darken($color: #03BAFE, $amount: 10);
+        }
+    }
+
+    &--secondary {
+        background: #FFA200;
+        color: black;
+
+        &:hover {
+            background-color: darken($color: #FFA200, $amount: 10);
+        }
+    }
+
+    &--ghost-primary {
+        color: #03BAFE;
+        background: transparent;
+        border: 1px solid #03BAFE;
+
+        &:hover {
+            background: #EBFAFF;
+            border: 1px solid #03BAFE;
+        }
+    }
+
+    &--ghost-secondary {
+        color: white;
+        background: transparent;
+        border: 1px solid #FFFFFF;
+
+        &:hover {
+            color: darken($color: #03BAFE, $amount: 10);
+            border-color: darken($color: #03BAFE, $amount: 10);
+        }
+    }
+
+    // sizes
+    &--s {
+        padding: 10px;
+        min-width: 120px;
+    }
+
+    &--m {
+        padding: 10px 20px;
+        min-width: 140px;
+    }
+
+    &--l {
+        padding: 10px 24px;
+        min-width: 160px;
+    }
+}
