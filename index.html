@@ -61,13 +61,13 @@
                     <p class="dream-card__text">Всем привет! Меня зовут Ирина и я хочу помочь своим родителям сделать
                         свежий
                         ремонт.Что-то мы собираем своими силами, но...</p>
-                    <div class="dream-card__progress">
-                        <span class="dream-card__update-text">Последний перевод 20 мин назад</span>
-                        <div class="dream-card__progress-all">
-                            <div class="dream-card__progress-current"></div>
+                    <div class="progressbar">
+                        <span class="progressbar__title">Последний перевод 20 мин назад</span>
+                        <div class="progressbar__bar-all">
+                            <div class="progressbar__bar-current"></div>
                         </div>
-                        <span class="dream-card__progress-all-text">
-                            <b class="dream-card__progress-current-text">€ 3 250 собрано</b> из € 4 300
+                        <span class="progressbar__text-all">
+                            <b class="progressbar__text-current">€ 3 250 собрано</b> из € 4 300
                         </span>
                     </div>
                 </div>
@@ -79,13 +79,13 @@
                     <p class="dream-card__text">Всем привет! Меня зовут Ирина и я хочу помочь своим родителям сделать
                         свежий
                         ремонт.Что-то мы собираем своими силами, но...</p>
-                    <div class="dream-card__progress">
-                        <span class="dream-card__update-text">Последний перевод 20 мин назад</span>
-                        <div class="dream-card__progress-all">
-                            <div class="dream-card__progress-current"></div>
+                    <div class="progressbar">
+                        <span class="progressbar__title">Последний перевод 20 мин назад</span>
+                        <div class="progressbar__bar-all">
+                            <div class="progressbar__bar-current"></div>
                         </div>
-                        <span class="dream-card__progress-all-text">
-                            <b class="dream-card__progress-current-text">€ 3 250 собрано</b> из € 4 300
+                        <span class="progressbar__text-all">
+                            <b class="progressbar__text-current">€ 3 250 собрано</b> из € 4 300
                         </span>
                     </div>
                 </div>
@@ -97,13 +97,13 @@
                     <p class="dream-card__text">Всем привет! Меня зовут Ирина и я хочу помочь своим родителям сделать
                         свежий
                         ремонт.Что-то мы собираем своими силами, но...</p>
-                    <div class="dream-card__progress">
-                        <span class="dream-card__update-text">Последний перевод 20 мин назад</span>
-                        <div class="dream-card__progress-all">
-                            <div class="dream-card__progress-current"></div>
+                    <div class="progressbar">
+                        <span class="progressbar__title">Последний перевод 20 мин назад</span>
+                        <div class="progressbar__bar-all">
+                            <div class="progressbar__bar-current"></div>
                         </div>
-                        <span class="dream-card__progress-all-text">
-                            <b class="dream-card__progress-current-text">€ 3 250 собрано</b> из € 4 300
+                        <span class="progressbar__text-all">
+                            <b class="progressbar__text-current">€ 3 250 собрано</b> из € 4 300
                         </span>
                     </div>
                 </div>
@@ -287,7 +287,37 @@
             </div>
         </div>
     </section>
-    <section class="start_here"></section>
+    <section class="section create-dream">
+        <div class="create-dream__content">
+            <div>
+                <div class="section__title">Расскажи о своей мечте прямо сейчас!</div>
+                <form class="create-dream__form">
+                    <div class="create-dream__image">
+                        <span>Перетащи сюда изображение или <label for="create-dream__file">загрузи с компьютера</label></span>
+                        <input class="create-dream__file" type="file" id="create-dream__file">
+                    </div>
+                    <div class="create-dream__inputs">
+                        <input type="text" placeholder="Название мечты">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Описание"></textarea>
+                        <div class="create-dream__input-with-label">
+                            <label for="target">Цель по сбору</label>
+                            <input type="number" value="5000" id="target">
+                        </div>
+                        <button class="btn btn--secondary btn--s">Продолжить</button>
+                    </div>
+                </form>
+            </div>
+            <div class="progressbar">
+                <span class="progressbar__title">Последний перевод 20 мин назад</span>
+                <div class="progressbar__bar-all">
+                    <div class="progressbar__bar-current"></div>
+                </div>
+                <span class="progressbar__text-all">
+                    <b class="progressbar__text-current">€ 3 250 собрано</b> из € 4 300
+                </span>
+            </div>
+        </div>
+    </section>
     <section class="faq"></section>
     <footer></footer>
 </body>
