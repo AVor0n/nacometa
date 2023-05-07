@@ -1,0 +1,61 @@
+.nav {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    grid-template-columns: min-content 1fr min-content;
+
+    &__links {
+        margin-left: auto;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__link {
+        // вынести в link component
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.1px;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+            border-bottom: 2px solid #FFA200;
+        }
+    }
+
+    &__login-btn {
+        // вынести в Icon component
+        background-color: transparent;
+        background-image: url("../assets/svg/user.svg");
+        width: 28px;
+        height: 28px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.select {
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    min-width: 120px;
+    color: white;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+}

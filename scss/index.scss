@@ -1,9 +1,12 @@
 @import './reset';
+@import './mixins';
+
 @import './components/button';
 @import './components/container';
 @import './components/progressbar';
 
 @import './sections/header';
+@import './sections/nav';
 @import './sections/leads';
 @import './sections/slogan';
 @import './sections/howto';

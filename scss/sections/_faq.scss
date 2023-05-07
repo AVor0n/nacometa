@@ -23,6 +23,7 @@
     }
 
     label {
+        position: relative;
         cursor: pointer;
         display: block;
         font-family: 'Nunito';
@@ -31,6 +32,7 @@
         font-size: 24px;
         line-height: 32px;
         letter-spacing: 0.2px;
+        padding-right: 40px;
     }
 
     input {
@@ -38,10 +40,10 @@
     }
 
     label:after {
+        position: absolute;
         box-sizing: border-box;
         content: '\276F';
         display: flex;
-        float: right;
         align-items: center;
         justify-content: center;
         color: #03BAFE;
@@ -51,6 +53,8 @@
         border-radius: 50%;
         width: 32px;
         height: 32px;
+        top: 0;
+        right: 0;
     }
 
     input:checked+label:after {

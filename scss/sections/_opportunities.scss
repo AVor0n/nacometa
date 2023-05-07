@@ -1,6 +1,17 @@
-
 .opportunities {
     padding-inline: 140px;
+
+    @include max(1300px) {
+        padding-inline: 100px;
+    }
+
+    @include max(1060px) {
+        padding-inline: 60px;
+    }
+
+    @include max(600px) {
+        padding-inline: 20px;
+    }
 
     &__text {
         margin-top: 30px;
@@ -15,20 +26,56 @@
         letter-spacing: 0.2px;
     }
 
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
 
+        @include max(1300px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include max(1060px) {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 .opportunity {
-    width: 25%;
     background: rgba(235, 250, 255, 0.7);
     border-radius: 20px;
     padding: 40px 30px;
+    position: relative;
+
+    @include max(1300px) {
+        display: grid;
+        gap: 10px 20px;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            'img title'
+            'img text';
+    }
+
+    @include max(1060px) {
+        &:nth-child(even) {
+            grid-template-areas:
+                'title img'
+                'text img';
+        }
+    }
 
     &__img {
+        grid-area: img;
         margin-bottom: 40px;
+
+        @include max(1300px) {
+            align-self: center;
+            margin-bottom: 0;
+        }
     }
 
     &__title {
+        grid-area: title;
         margin-bottom: 20px;
         font-family: 'Manrope';
         font-style: normal;
@@ -36,9 +83,14 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.1px;
+
+        @include max(1300px) {
+            margin-bottom: 0;
+        }
     }
 
     &__text {
+        grid-area: text;
         font-family: 'Nunito';
         font-style: normal;
         font-weight: 400;
