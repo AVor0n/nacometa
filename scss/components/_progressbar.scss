@@ -1,0 +1,47 @@
+.progressbar {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
+    }
+
+    &__bar-current {
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(0deg, #03BAFE, #03BAFE), linear-gradient(0deg, #F7EFEF, #F7EFEF), #F7EFEF;
+        border-radius: 10px;
+    }
+
+    &__bar-all {
+        height: 5px;
+        width: 100%;
+        background: rgba(3, 186, 254, 0.2);
+        border-radius: 10px;
+    }
+
+    &__text-current {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    &__text-all {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
+    }
+}

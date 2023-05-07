@@ -1,0 +1,66 @@
+.faq {
+    padding: 60px 140px 100px;
+
+    .section__title {
+        margin-bottom: 50px;
+    }
+}
+
+.accordion {
+
+    &__body {
+        height: 0;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: rgba(0, 0, 0, 0);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        padding-right: 60px;
+    }
+
+    label {
+        cursor: pointer;
+        display: block;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.2px;
+    }
+
+    input {
+        display: none;
+    }
+
+    label:after {
+        box-sizing: border-box;
+        content: '\276F';
+        display: flex;
+        float: right;
+        align-items: center;
+        justify-content: center;
+        color: #03BAFE;
+        font-size: 16px;
+        background: rgba(107, 203, 239, 0.2);
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+    }
+
+    input:checked+label:after {
+        transition: transform .3s;
+        transform: rotate(90deg);
+    }
+
+    input:checked+label+.accordion__body {
+        height: max-content;
+        color: black;
+        padding: 20px 60px 20px 0;
+    }
+}
