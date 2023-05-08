@@ -1,13 +1,23 @@
 .nav {
     display: grid;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     grid-template-columns: min-content 1fr min-content;
+    @include max(1260px) {
+        display: flex;
+        justify-content: space-between;
+    }
 
     &__links {
         margin-left: auto;
         display: flex;
+        width: 100%;
         gap: 30px;
+        justify-content: flex-end;
+
+        @include max(1260px) {
+            display: none;
+        }
     }
 
     &__link {
@@ -27,6 +37,37 @@
         }
     }
 
+    &__btns {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__lang-select {
+        @include max(1400px) {
+            display: none;
+        }
+    }
+
+    &__lang-btn {
+        display: none;
+
+        @include max(1400px) {
+            display: block;
+            // вынести в Icon component
+            background-color: transparent;
+            background-image: url("../assets/svg/lang.svg");
+            width: 28px;
+            height: 28px;
+            border: none;
+            cursor: pointer;
+        }
+
+        @include max(1260px) {
+            display: none;
+        }
+    }
+
     &__login-btn {
         // вынести в Icon component
         background-color: transparent;
@@ -36,26 +77,19 @@
         border: none;
         cursor: pointer;
     }
-}
 
-.select {
-    box-sizing: border-box;
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.2px;
+    &__menu-btn {
+        display: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-    min-width: 120px;
-    color: white;
-    background: transparent;
-    border: 1px solid #FFFFFF;
-    cursor: pointer;
+        @include max(1260px) {
+            display: block;
+            // вынести в Icon component
+            background-color: transparent;
+            background-image: url("../assets/svg/burger.svg");
+            width: 28px;
+            height: 28px;
+            border: none;
+            cursor: pointer;
+        }
+    }
 }

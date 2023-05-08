@@ -9,6 +9,10 @@
     margin: 0 auto;
     padding: 30px 140px 90px;
 
+    @include max(1060px) {
+        padding-inline: 100px;
+    }
+
     &__nav {
         margin-bottom: 60px;
     }
