@@ -3,3 +3,11 @@
     @content;
   }
 }
+
+@mixin multiline-text-overflow($count_lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $count_lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
