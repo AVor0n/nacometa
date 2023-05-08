@@ -1,7 +1,18 @@
 .slogan {
-    background: rgba(235, 250, 255, 0.7);
-    border-radius: 20px;
     margin: 0 140px;
+
+    @include max(1060px) {
+        margin-inline: 50px;
+    }
+
+    @include max(700px) {
+        margin-inline: 20px;
+    }
+
+    &__container {
+        background: rgba(235, 250, 255, 0.7);
+        border-radius: 20px;
+    }
 
     &__text {
         padding: 45px 10px;
