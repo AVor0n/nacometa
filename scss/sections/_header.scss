@@ -10,7 +10,11 @@
     padding: 30px 140px 90px;
 
     @include max(1060px) {
-        padding-inline: 100px;
+        padding: 30px 60px;
+    }
+
+    @include max(700px) {
+        padding: 20px 30px;
     }
 
     &__nav {
@@ -31,6 +35,11 @@
         font-size: 56px;
         line-height: 80px;
         letter-spacing: 0.2px;
+
+        @include max(700px) {
+            font-size: 40px;
+            line-height: 50px;
+        }
     }
 
     &__text {
@@ -42,5 +51,31 @@
         line-height: 32px;
         letter-spacing: 0.1px;
         margin-bottom: 16px;
+
+        @include max(1060px) {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        @include max(700px) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: 20px;
+
+        @include max(1060px) {
+            max-width: 500px;
+            flex-direction: column;
+        }
+    }
+
+    &__video-btn {
+        @include max(700px) {
+            display: none;
+        }
     }
 }
