@@ -1,5 +1,5 @@
 .slogan {
-    margin: 0 140px;
+    padding-inline: 140px;
 
     @include max(1060px) {
         margin-inline: 50px;
