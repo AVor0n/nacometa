@@ -4,6 +4,12 @@
   }
 }
 
+@mixin max-container($breakpoint) {
+  @container(max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
 @mixin multiline-text-overflow($count_lines) {
   display: -webkit-box;
   -webkit-line-clamp: $count_lines;
