@@ -1091,6 +1091,15 @@ table {
 
 .opportunities {
   padding-inline: 140px;
+  margin-bottom: 60px;
+}
+.opportunities .section__title {
+  margin-bottom: 30px;
+}
+@media (max-width: 660px) {
+  .opportunities .section__title {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 1300px) {
   .opportunities {
@@ -1102,13 +1111,13 @@ table {
     padding-inline: 60px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 660px) {
   .opportunities {
     padding-inline: 20px;
+    margin-bottom: 30px;
   }
 }
 .opportunities__text {
-  margin-top: 30px;
   margin-bottom: 50px;
   font-family: "Nunito";
   font-style: normal;
@@ -1122,6 +1131,17 @@ table {
 @media (max-width: 1300px) {
   .opportunities__text {
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 1300px) {
+  .opportunities__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 660px) {
+  .opportunities__text {
+    margin-bottom: 20px;
   }
 }
 .opportunities__container {
@@ -1139,15 +1159,11 @@ table {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 660px) {
   .opportunities__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-auto-flow: column;
-  }
-}
-@media (max-width: 380px) {
-  .opportunities__container {
     gap: 10px;
   }
 }
@@ -1171,7 +1187,7 @@ table {
     grid-template-areas: "title img" "text img";
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 660px) {
   .opportunity {
     padding: 20px;
     grid-template-columns: 1fr;
@@ -1208,7 +1224,7 @@ table {
     margin-bottom: 0;
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 660px) {
   .opportunity__title {
     text-align: center;
     width: -moz-min-content;
@@ -1224,7 +1240,7 @@ table {
   line-height: 24px;
   letter-spacing: 0.1px;
 }
-@media (max-width: 560px) {
+@media (max-width: 660px) {
   .opportunity__text {
     display: none;
   }
@@ -1232,7 +1248,6 @@ table {
 
 .create-dream {
   position: relative;
-  margin-top: 60px;
   padding-inline: 140px;
 }
 @media (max-width: 1060px) {
