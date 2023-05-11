@@ -752,6 +752,11 @@ table {
     margin-top: 0;
   }
 }
+@media (max-width: 660px) {
+  .howto__instruction-start {
+    width: 100%;
+  }
+}
 .howto__instruction-more {
   display: none;
 }
@@ -813,9 +818,20 @@ table {
 .feedback {
   padding: 0 80px;
 }
+@media (max-width: 660px) {
+  .feedback {
+    padding-inline: 0;
+  }
+}
 .feedback .section__title {
   padding-inline: 40px;
   margin-bottom: 20px;
+}
+@media (max-width: 660px) {
+  .feedback .section__title {
+    padding-inline: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .feedback-slider {
@@ -828,10 +844,20 @@ table {
   overflow: hidden;
   padding: 30px;
 }
+@media (max-width: 660px) {
+  .feedback-slider__slides {
+    padding: 20px;
+  }
+}
 .feedback-slider__indicators {
   display: flex;
   margin-left: 20px;
   gap: 8px;
+}
+@media (max-width: 660px) {
+  .feedback-slider__indicators {
+    justify-content: center;
+  }
 }
 .feedback-slider__indicator {
   width: 8px;
@@ -854,6 +880,11 @@ table {
   border: 1px solid #F9F9F9;
   background-color: white;
 }
+@media (max-width: 660px) {
+  .feedback-slider__prev-btn, .feedback-slider__next-btn {
+    display: none;
+  }
+}
 .feedback-slider__prev-btn {
   left: 0;
   transform: translateY(-50%);
@@ -871,7 +902,7 @@ table {
   gap: 16px;
   width: calc((100% - 2 * var(--gap)) / 3);
   background: #FFFFFF;
-  box-shadow: 0px 24px 32px rgba(50, 50, 71, 0.05);
+  box-shadow: 0px 10px 10px rgba(50, 50, 71, 0.05);
   border-radius: 20px;
 }
 @media (max-width: 1060px) {
@@ -892,6 +923,12 @@ table {
   line-height: 32px;
   letter-spacing: 0.1px;
 }
+@media (max-width: 660px) {
+  .feedback-slide__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 .feedback-slide__text {
   font-family: "Nunito";
   font-style: normal;
@@ -900,11 +937,22 @@ table {
   line-height: 24px;
   letter-spacing: 0.1px;
 }
+@media (max-width: 660px) {
+  .feedback-slide__text {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
 .feedback-slide__author {
   display: flex;
   gap: 20px;
   align-items: center;
   margin-top: auto;
+}
+@media (max-width: 660px) {
+  .feedback-slide__author {
+    gap: 15px;
+  }
 }
 .feedback-slide__author-photo {
   width: 35px;
@@ -918,6 +966,12 @@ table {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.1px;
+}
+@media (max-width: 660px) {
+  .feedback-slide__author-name {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .video {

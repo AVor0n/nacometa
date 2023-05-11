@@ -1,9 +1,18 @@
 .feedback {
     padding: 0 80px;
 
+    @include max(660px) {
+        padding-inline: 0;
+    }
+
     .section__title {
         padding-inline: 40px;
         margin-bottom: 20px;
+
+        @include max(660px) {
+            padding-inline: 20px;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -16,12 +25,20 @@
         gap: var(--gap);
         overflow: hidden;
         padding: 30px;
+
+        @include max(660px) {
+            padding: 20px;
+        }
     }
 
     &__indicators {
         display: flex;
         margin-left: 20px;
         gap: 8px;
+
+        @include max(660px) {
+            justify-content: center;
+        }
     }
 
     &__indicator {
@@ -47,6 +64,10 @@
         border-radius: 50%;
         border: 1px solid #F9F9F9;
         background-color: white;
+
+        @include max(660px) {
+            display: none;
+        }
     }
 
     &__prev-btn {
@@ -68,13 +89,14 @@
     gap: 16px;
     width: calc((100% - (2 * var(--gap))) / 3);
     background: #FFFFFF;
-    box-shadow: 0px 24px 32px rgba(50, 50, 71, 0.05);
+    box-shadow: 0px 10px 10px rgba(50, 50, 71, 0.05);
     border-radius: 20px;
 
 
     @include max(1060px) {
         min-width: calc(50% - 20px);
     }
+
     @include max(760px) {
         min-width: 100%;
     }
@@ -86,6 +108,11 @@
         font-size: 24px;
         line-height: 32px;
         letter-spacing: 0.1px;
+
+        @include max(660px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 
     &__text {
@@ -95,6 +122,11 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.1px;
+
+        @include max(660px) {
+            font-size: 12px;
+            line-height: 24px;
+        }
     }
 
     &__author {
@@ -102,6 +134,10 @@
         gap: 20px;
         align-items: center;
         margin-top: auto;
+
+        @include max(660px) {
+            gap: 15px;
+        }
 
         &-photo {
             width: 35px;
@@ -116,6 +152,11 @@
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.1px;
+
+            @include max(660px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
     }
 }
