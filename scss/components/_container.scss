@@ -39,6 +39,12 @@
             font-size: 30px;
             line-height: 36px;
         }
+
+        @include max(800px) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
         @include max(660px) {
             font-size: 21px;
             line-height: 24px;

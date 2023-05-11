@@ -1,6 +1,15 @@
 .howto {
     padding: 60px 140px 110px;
 
+    @include max(1060px) {
+        padding-inline: 50px;
+    }
+
+    @include max(700px) {
+        padding-inline: 20px;
+        padding-bottom: 30px;
+    }
+
     &__content {
         display: grid;
         margin-top: 95px;
@@ -9,6 +18,27 @@
         grid-template-areas:
             'chart stats'
             'chart steps';
+
+        @include max(1280px) {
+            margin-top: 50px;
+            grid-template-columns: 5fr 4fr;
+            gap: 20px;
+            grid-template-areas:
+                'stats stats'
+                'chart steps';
+        }
+
+        @include max(1060px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'chart'
+                'stats'
+                'steps';
+        }
+
+        @include max(660px) {
+            margin-top: 35px;
+        }
     }
 
     &__chart {
@@ -29,6 +59,17 @@
         gap: 15px;
         padding: 30px;
 
+        @include max(1280px) {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        @include max(660px) {
+            grid-template-columns: 1fr;
+        }
+
         &-title {
             font-family: 'Nunito';
             font-style: normal;
@@ -36,6 +77,11 @@
             font-size: 24px;
             line-height: 32px;
             letter-spacing: 0.1px;
+
+            @include max(660px) {
+                size: 18px;
+                line-height: 22px;
+            }
         }
 
         &-amount {
@@ -48,6 +94,11 @@
             align-items: center;
             letter-spacing: 0.1px;
             color: #03BAFE;
+
+            @include max(660px) {
+                font-size: 21px;
+                line-height: 24px;
+            }
         }
 
         &-text {
@@ -60,16 +111,27 @@
             align-items: center;
             letter-spacing: 0.1px;
             color: #999999;
+
+            @include max(1280px) {
+                grid-column: 1/-1;
+            }
+
+            @include max(660px) {
+                font-size: 14px;
+                line-height: 24px;
+            }
         }
     }
 
     &__instruction {
         grid-area: steps;
+        container-type: inline-size;
         display: flex;
         flex-direction: column;
         background: #EBFAFF;
         border-radius: 20px;
-        padding: 20px 40px 20px 20px;
+        padding: 20px;
+        box-sizing: border-box;
 
         &-title {
             font-family: 'Nunito';
@@ -78,11 +140,47 @@
             font-size: 24px;
             line-height: 32px;
             letter-spacing: 0.1px;
+
+            @include max(660px) {
+                font-size: 21px;
+                line-height: 24px;
+            }
         }
 
         a {
             color: #01bafe;
             text-decoration: none;
+        }
+
+        &-btns {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            @include max-container(320px) {
+                gap: 10px;
+                flex-direction: column;
+            }
+
+            @include max(1060px) {
+                justify-content: flex-start;
+                margin-top: 10px;
+                gap: 20px;
+            }
+
+            @include max(660px) {
+                margin-top: 0;
+            }
+        }
+
+        &-start {
+            @include max(660px){
+                width: 100%;
+            }
+        }
+
+        &-more {
+            display: none;
         }
     }
 
@@ -102,6 +200,12 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        padding-right: 20px;
+
+        @include max(660px) {
+            font-size: 12px;
+            line-height: 24px;
+        }
     }
 
     &__step {

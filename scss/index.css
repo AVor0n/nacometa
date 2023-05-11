@@ -179,6 +179,12 @@ table {
     line-height: 36px;
   }
 }
+@media (max-width: 800px) {
+  .section__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 @media (max-width: 660px) {
   .section__title {
     font-size: 21px;
@@ -546,12 +552,12 @@ table {
 }
 @media (max-width: 1060px) {
   .slogan {
-    margin-inline: 50px;
+    padding-inline: 50px;
   }
 }
 @media (max-width: 700px) {
   .slogan {
-    margin-inline: 20px;
+    padding-inline: 20px;
   }
 }
 .slogan__container {
@@ -576,12 +582,42 @@ table {
 .howto {
   padding: 60px 140px 110px;
 }
+@media (max-width: 1060px) {
+  .howto {
+    padding-inline: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .howto {
+    padding-inline: 20px;
+    padding-bottom: 30px;
+  }
+}
 .howto__content {
   display: grid;
   margin-top: 95px;
   gap: 20px 60px;
   grid-template-columns: 7fr 4fr;
   grid-template-areas: "chart stats" "chart steps";
+}
+@media (max-width: 1280px) {
+  .howto__content {
+    margin-top: 50px;
+    grid-template-columns: 5fr 4fr;
+    gap: 20px;
+    grid-template-areas: "stats stats" "chart steps";
+  }
+}
+@media (max-width: 1060px) {
+  .howto__content {
+    grid-template-columns: 1fr;
+    grid-template-areas: "chart" "stats" "steps";
+  }
+}
+@media (max-width: 660px) {
+  .howto__content {
+    margin-top: 35px;
+  }
 }
 .howto__chart {
   grid-area: chart;
@@ -599,6 +635,19 @@ table {
   gap: 15px;
   padding: 30px;
 }
+@media (max-width: 1280px) {
+  .howto__stats {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 20px;
+  }
+}
+@media (max-width: 660px) {
+  .howto__stats {
+    grid-template-columns: 1fr;
+  }
+}
 .howto__stats-title {
   font-family: "Nunito";
   font-style: normal;
@@ -606,6 +655,12 @@ table {
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.1px;
+}
+@media (max-width: 660px) {
+  .howto__stats-title {
+    size: 18px;
+    line-height: 22px;
+  }
 }
 .howto__stats-amount {
   font-family: "Nunito";
@@ -618,6 +673,12 @@ table {
   letter-spacing: 0.1px;
   color: #03BAFE;
 }
+@media (max-width: 660px) {
+  .howto__stats-amount {
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
 .howto__stats-text {
   font-family: "Manrope";
   font-style: normal;
@@ -629,13 +690,26 @@ table {
   letter-spacing: 0.1px;
   color: #999999;
 }
+@media (max-width: 1280px) {
+  .howto__stats-text {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 660px) {
+  .howto__stats-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 .howto__instruction {
   grid-area: steps;
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   background: #EBFAFF;
   border-radius: 20px;
-  padding: 20px 40px 20px 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .howto__instruction-title {
   font-family: "Nunito";
@@ -645,9 +719,41 @@ table {
   line-height: 32px;
   letter-spacing: 0.1px;
 }
+@media (max-width: 660px) {
+  .howto__instruction-title {
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
 .howto__instruction a {
   color: #01bafe;
   text-decoration: none;
+}
+.howto__instruction-btns {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@container (max-width: 320px) {
+  .howto__instruction-btns {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1060px) {
+  .howto__instruction-btns {
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 20px;
+  }
+}
+@media (max-width: 660px) {
+  .howto__instruction-btns {
+    margin-top: 0;
+  }
+}
+.howto__instruction-more {
+  display: none;
 }
 .howto__steps {
   list-style-type: none;
@@ -665,6 +771,13 @@ table {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+  padding-right: 20px;
+}
+@media (max-width: 660px) {
+  .howto__steps {
+    font-size: 12px;
+    line-height: 24px;
+  }
 }
 .howto__step {
   display: flex;
