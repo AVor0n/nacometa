@@ -47,6 +47,8 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         padding-bottom: 20px;
+        opacity: 0;
+        transition: all 0.5s;
 
         @include max(1060px) {
             grid-template-columns: 1fr;
@@ -96,6 +98,7 @@
 
         @include max(1060px) {
             width: 230px;
+            height: 100%;
         }
 
         @include max(700px) {
