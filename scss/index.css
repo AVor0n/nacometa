@@ -1249,6 +1249,7 @@ table {
 .create-dream {
   position: relative;
   padding-inline: 140px;
+  margin-bottom: 60px;
 }
 @media (max-width: 1060px) {
   .create-dream {
@@ -1263,6 +1264,7 @@ table {
 @media (max-width: 400px) {
   .create-dream {
     padding-inline: 10px;
+    margin-bottom: 35px;
   }
 }
 .create-dream__background {
@@ -1428,10 +1430,22 @@ table {
 }
 
 .faq {
-  padding: 60px 140px 100px;
+  padding-inline: 140px;
+  margin-bottom: 100px;
+}
+@media (max-width: 660px) {
+  .faq {
+    padding-inline: 20px;
+    margin-bottom: 35px;
+  }
 }
 .faq .section__title {
   margin-bottom: 50px;
+}
+@media (max-width: 660px) {
+  .faq .section__title {
+    margin-bottom: 20px;
+  }
 }
 
 .accordion__body {
@@ -1447,6 +1461,13 @@ table {
   transition: all 0.3s;
   padding-right: 60px;
 }
+@media (max-width: 660px) {
+  .accordion__body {
+    font-size: 12px;
+    line-height: 24px;
+    padding-right: 40px;
+  }
+}
 .accordion label {
   position: relative;
   cursor: pointer;
@@ -1458,6 +1479,12 @@ table {
   line-height: 32px;
   letter-spacing: 0.2px;
   padding-right: 40px;
+}
+@media (max-width: 660px) {
+  .accordion label {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 .accordion input {
   display: none;

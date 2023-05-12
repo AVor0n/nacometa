@@ -1,8 +1,18 @@
 .faq {
-    padding: 60px 140px 100px;
+    padding-inline: 140px;
+    margin-bottom: 100px;
+
+    @include max(660px) {
+        padding-inline: 20px;
+        margin-bottom: 35px;
+    }
 
     .section__title {
         margin-bottom: 50px;
+
+        @include max(660px) {
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -20,6 +30,12 @@
         margin-bottom: 20px;
         transition: all 0.3s;
         padding-right: 60px;
+
+        @include max(660px) {
+            font-size: 12px;
+            line-height: 24px;
+            padding-right: 40px;
+        }
     }
 
     label {
@@ -33,6 +49,11 @@
         line-height: 32px;
         letter-spacing: 0.2px;
         padding-right: 40px;
+
+        @include max(660px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 
     input {
