@@ -244,6 +244,7 @@ table {
   max-width: 1440px;
   margin: 0 auto;
   padding: 30px 140px 90px;
+  margin-bottom: 50px;
 }
 @media (max-width: 1060px) {
   .header {
@@ -253,6 +254,7 @@ table {
 @media (max-width: 700px) {
   .header {
     padding: 20px 30px;
+    margin-bottom: 30px;
   }
 }
 .header__nav {
@@ -407,27 +409,30 @@ table {
 }
 
 .leads {
-  padding: 50px 140px;
+  padding-inline: 140px;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas: "title more" "cards cards";
-  gap: 50px;
+  gap: 30px;
+  margin-bottom: 60px;
 }
 @media (max-width: 1060px) {
   .leads {
-    padding: 50px;
+    padding-inline: 50px;
     grid-template-columns: 1fr;
     grid-template-areas: "title" "cards" "more";
   }
 }
 @media (max-width: 700px) {
   .leads {
-    padding: 50px 0;
-    gap: 30px;
+    padding-inline: 0;
+    gap: 0px;
+    margin-bottom: 30px;
   }
 }
 .leads__section-title {
   grid-area: title;
+  margin-bottom: 20px;
 }
 @media (max-width: 700px) {
   .leads__section-title {
@@ -448,6 +453,7 @@ table {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  padding-bottom: 20px;
 }
 @media (max-width: 1060px) {
   .leads__dream-cards {
@@ -466,7 +472,7 @@ table {
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
-  filter: drop-shadow(0px 24px 32px rgba(50, 50, 71, 0.05));
+  filter: drop-shadow(0px 10px 10px rgba(50, 50, 71, 0.05));
   transition: 500ms;
 }
 @media (max-width: 1060px) {

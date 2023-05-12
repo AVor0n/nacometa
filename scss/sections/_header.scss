@@ -8,6 +8,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 30px 140px 90px;
+    margin-bottom: 50px;
 
     @include max(1060px) {
         padding: 30px 60px;
@@ -15,6 +16,7 @@
 
     @include max(700px) {
         padding: 20px 30px;
+        margin-bottom: 30px;
     }
 
     &__nav {

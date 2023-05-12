@@ -1,14 +1,15 @@
 .leads {
-    padding: 50px 140px;
+    padding-inline: 140px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
         'title more'
         'cards cards';
-    gap: 50px;
+    gap: 30px;
+    margin-bottom: 60px;
 
     @include max(1060px) {
-        padding: 50px;
+        padding-inline: 50px;
         grid-template-columns: 1fr;
         grid-template-areas:
             'title'
@@ -17,12 +18,14 @@
     }
 
     @include max(700px) {
-        padding: 50px 0;
-        gap: 30px;
+        padding-inline: 0;
+        gap: 0px;
+        margin-bottom: 30px;
     }
 
     &__section-title {
         grid-area: title;
+        margin-bottom: 20px;
 
         @include max(700px) {
             padding-inline: 30px;
@@ -43,6 +46,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
+        padding-bottom: 20px;
 
         @include max(1060px) {
             grid-template-columns: 1fr;
@@ -60,7 +64,7 @@
     border-radius: 20px;
     overflow: hidden;
     background-color: white;
-    filter: drop-shadow(0px 24px 32px rgba(50, 50, 71, 0.05));
+    filter: drop-shadow(0px 10px 10px rgba(50, 50, 71, 0.05));
     transition: 500ms;
 
     @include max(1060px) {
