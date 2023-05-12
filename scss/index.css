@@ -319,6 +319,10 @@ table {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nav {
   display: grid;
   align-items: center;
