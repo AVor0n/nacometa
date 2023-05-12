@@ -1,5 +1,6 @@
 .slogan {
     padding-inline: 140px;
+    margin-bottom: 60px;
 
     @include max(1060px) {
         padding-inline: 50px;
@@ -7,6 +8,7 @@
 
     @include max(700px) {
         padding-inline: 20px;
+        margin-bottom: 30px;
     }
 
     &__container {

@@ -555,6 +555,7 @@ table {
 
 .slogan {
   padding-inline: 140px;
+  margin-bottom: 60px;
 }
 @media (max-width: 1060px) {
   .slogan {
@@ -564,6 +565,7 @@ table {
 @media (max-width: 700px) {
   .slogan {
     padding-inline: 20px;
+    margin-bottom: 30px;
   }
 }
 .slogan__container {
@@ -586,7 +588,8 @@ table {
 }
 
 .howto {
-  padding: 60px 140px 110px;
+  padding-inline: 140px;
+  margin-bottom: 110px;
 }
 @media (max-width: 1060px) {
   .howto {
@@ -596,7 +599,7 @@ table {
 @media (max-width: 700px) {
   .howto {
     padding-inline: 20px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 .howto__content {

@@ -1,5 +1,6 @@
 .howto {
-    padding: 60px 140px 110px;
+    padding-inline: 140px;
+    margin-bottom: 110px;
 
     @include max(1060px) {
         padding-inline: 50px;
@@ -7,7 +8,7 @@
 
     @include max(700px) {
         padding-inline: 20px;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     &__content {
