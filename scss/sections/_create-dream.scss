@@ -12,8 +12,8 @@
     }
 
 
-    @include max(400px) {
-        padding-inline: 10px;
+    @include max(660px) {
+        padding-inline: 20px;
         margin-bottom: 35px;
     }
 
@@ -37,11 +37,8 @@
         }
 
         @include max(660px) {
-            margin-inline: 30px;
-        }
-
-        @include max(400px) {
-            margin-inline: 10px;
+            margin: 0;
+            background: transparent;
         }
     }
 
@@ -58,7 +55,7 @@
         }
 
         @include max(660px) {
-            padding-inline: 0;
+            padding: 0;
         }
     }
 
@@ -69,13 +66,17 @@
         @include max(1060px) {
             width: initial;
         }
+
+        @include max(660px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__form {
         container-type: inline-size;
         display: flex;
         flex-direction: column;
-        filter: drop-shadow(0 5px 10px rgba(50, 50, 71, 0.05));
+        box-shadow: 0 5px 10px rgba(50, 50, 71, 0.05);
         background: #FFFFFF;
         border-radius: 20px;
         font-family: 'Nunito';
@@ -97,15 +98,32 @@
         text-align: center;
         width: 100%;
 
-        @include max-container(520px) {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
+        @include max(660px) {
+            padding-top: 200px;
+            padding-bottom: 50px;
+            background-size: 75px 75px;
         }
 
         label {
             color: #03BAFE;
         }
+    }
+
+    &__image-label {
+        &--desktop {
+            @include max(660px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @include max(660px) {
+                display: initial;
+            }
+        }
+
     }
 
     &__file {
@@ -155,6 +173,10 @@
         button {
             margin-inline: auto;
             width: fit-content;
+
+            @include max(660px){
+                width: 100%;
+            }
         }
     }
 

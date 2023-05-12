@@ -1270,9 +1270,9 @@ table {
     padding-inline: 60px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 660px) {
   .create-dream {
-    padding-inline: 10px;
+    padding-inline: 20px;
     margin-bottom: 35px;
   }
 }
@@ -1298,12 +1298,8 @@ table {
 }
 @media (max-width: 660px) {
   .create-dream__background {
-    margin-inline: 30px;
-  }
-}
-@media (max-width: 400px) {
-  .create-dream__background {
-    margin-inline: 10px;
+    margin: 0;
+    background: transparent;
   }
 }
 .create-dream__content {
@@ -1321,7 +1317,7 @@ table {
 }
 @media (max-width: 660px) {
   .create-dream__content {
-    padding-inline: 0;
+    padding: 0;
   }
 }
 .create-dream .section__title {
@@ -1333,11 +1329,16 @@ table {
     width: initial;
   }
 }
+@media (max-width: 660px) {
+  .create-dream .section__title {
+    margin-bottom: 20px;
+  }
+}
 .create-dream__form {
   container-type: inline-size;
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0 5px 10px rgba(50, 50, 71, 0.05));
+  box-shadow: 0 5px 10px rgba(50, 50, 71, 0.05);
   background: #FFFFFF;
   border-radius: 20px;
   font-family: "Nunito";
@@ -1358,15 +1359,28 @@ table {
   text-align: center;
   width: 100%;
 }
-@container (max-width: 520px) {
+@media (max-width: 660px) {
   .create-dream__image {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    background-size: 75px 75px;
   }
 }
 .create-dream__image label {
   color: #03BAFE;
+}
+@media (max-width: 660px) {
+  .create-dream__image-label--desktop {
+    display: none;
+  }
+}
+.create-dream__image-label--mobile {
+  display: none;
+}
+@media (max-width: 660px) {
+  .create-dream__image-label--mobile {
+    display: initial;
+  }
 }
 .create-dream__file {
   display: none;
@@ -1426,6 +1440,11 @@ table {
   margin-inline: auto;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 660px) {
+  .create-dream__inputs button {
+    width: 100%;
+  }
 }
 .create-dream__input-with-label {
   display: flex;
