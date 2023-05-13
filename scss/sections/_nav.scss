@@ -83,7 +83,7 @@ html {
         cursor: pointer;
     }
 
-    &__menu-btn {
+    &__burger-btn {
         display: none;
 
         @include max(1260px) {

@@ -31,7 +31,19 @@
                 </div>
                 <button class="nav__lang-btn" type="button" title="change lang"></button>
                 <button class="nav__login-btn" type="button" title="login"></button>
-                <button class="nav__menu-btn" type="button" title="menu"></button>
+                <button class="nav__burger-btn" type="button" title="menu"></button>
+            </div>
+        </nav>
+        <nav class="burger header__burger">
+            <ul class="burger__links">
+                <li><a href="#howto" class="burger__link">Как это работает</a></li>
+                <li><a href="#feedback" class="burger__link">Истории успеха</a></li>
+                <li><a href="#opportunities" class="burger__link">Возможности</a></li>
+                <li><a href="#faq" class="burger__link">FAQ</a></li>
+                <li><a href="#contacts" class="burger__link">Контакты</a></li>
+            </ul>
+            <div class="select burger__lang-select">
+                Русский
             </div>
         </nav>
 
@@ -136,7 +148,8 @@
                         друзей и участников сообщества Nacometa</li>
                 </ol>
                 <div class="howto__instruction-btns">
-                    <a href="#create-dream" class="howto__instruction-start btn btn--secondary btn--s">Начать сбор средств</a>
+                    <a href="#create-dream" class="howto__instruction-start btn btn--secondary btn--s">Начать сбор
+                        средств</a>
                     <a href="#feedback" class="howto__instruction-more btn btn--primary btn--s">Узнать подробнее</a>
                 </div>
             </div>
@@ -275,7 +288,8 @@
                             <label for="target">Цель по сбору</label>
                             <input type="number" value="5000" id="target">
                         </div>
-                        <button class="btn btn--secondary btn--s" type="submit" onclick="e => e.prevendDefault();">Продолжить</button>
+                        <button class="btn btn--secondary btn--s" type="submit"
+                            onclick="e => e.prevendDefault();">Продолжить</button>
                     </div>
                 </form>
             </div>
@@ -397,7 +411,7 @@
         </div>
         <div class="footer__copyright">© 2021 Nacometa. Все права защищены</div>
     </footer>
-
+    <div class="overlay"></div>
     <script src="./js/index.js" type="module"></script>
 </body>
 
