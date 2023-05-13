@@ -1,7 +1,6 @@
 import { langs } from '../utils/locale.js';
+import { openModal } from './modal.js';
 import { initProgressBar } from './progressbar.js';
-
-const COUNT_LEADS_CARDS = 3;
 
 const $cardTemplate = document.getElementById('leads__dream-card');
 const $cardsContainer = document.querySelector('.leads__dream-cards');
@@ -10,7 +9,7 @@ const getDreamCardsData = async () => {
     return await fetch('../../data/dreams.json').then(data => data.json());
 };
 
-const getLeadsData = (data, count = COUNT_LEADS_CARDS) => {
+const getLeadsData = (data, count = 3) => {
     return data.sort((a, b) => b.money.current - a.money.current).slice(0, count);
 };
 
@@ -39,7 +38,16 @@ const fillCardsContainer = ($container, data) => {
     setTimeout(() => initProgressBar($container), 700);
 };
 
+const addModalHandler = $cards => {
+    for (const $card of $cards) {
+        $card.addEventListener('click', () => {
+            openModal($card.cloneNode(true));
+        });
+    }
+};
+
 export const init = async () => {
     const { data } = await getDreamCardsData();
     fillCardsContainer($cardsContainer, getLeadsData(data));
+    addModalHandler([...$cardsContainer.children]);
 };

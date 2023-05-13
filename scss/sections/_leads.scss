@@ -140,3 +140,21 @@
         padding: 0 20px 20px;
     }
 }
+
+.modal {
+    .dream-card {
+        overflow-y: auto;
+        max-width: 500px;
+        max-height: 80vh;
+
+        &:hover {
+            cursor: initial;
+            transform: none;
+            filter: none;
+        }
+
+        .dream-card__text {
+            @include multiline-text-overflow(initial);
+        }
+    }
+}

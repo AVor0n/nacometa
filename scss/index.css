@@ -181,6 +181,30 @@ table {
   fill: white;
 }
 
+.modal {
+  opacity: 0;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 30px;
+  z-index: 10;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: flex;
+  place-items: center;
+}
+@media (max-width: 660px) {
+  .modal {
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+.modal.active {
+  opacity: 1;
+  outline: none;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -246,6 +270,9 @@ table {
   background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .overlay--active {
   opacity: 1;
@@ -670,6 +697,24 @@ html {
 .dream-card__progressbar {
   grid-area: progress;
   padding: 0 20px 20px;
+}
+
+.modal .dream-card {
+  overflow-y: auto;
+  max-width: 500px;
+  max-height: 80vh;
+}
+.modal .dream-card:hover {
+  cursor: initial;
+  transform: none;
+  filter: none;
+}
+.modal .dream-card .dream-card__text {
+  display: -webkit-box;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .slogan {
