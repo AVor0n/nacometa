@@ -1048,12 +1048,14 @@ html {
   height: 8px;
   border-radius: 50%;
   background: rgba(228, 228, 228, 0.5);
+  cursor: pointer;
 }
-.feedback-slider__indicator--active {
+.feedback-slider__indicator.active {
   background: linear-gradient(0deg, #03BAFE, #03BAFE), linear-gradient(0deg, #F7EFEF, #F7EFEF), #F7EFEF;
 }
 .feedback-slider__prev-btn, .feedback-slider__next-btn {
   position: absolute;
+  cursor: pointer;
   top: 50%;
   background: url("../assets/svg/chevron.svg") no-repeat;
   background-position: center;
@@ -1084,7 +1086,7 @@ html {
   flex-direction: column;
   padding: 30px;
   gap: 16px;
-  width: calc((100% - 2 * var(--gap)) / 3);
+  min-width: calc((100% - 2 * var(--gap)) / 3);
   background: #FFFFFF;
   box-shadow: 0px 10px 10px rgba(50, 50, 71, 0.05);
   border-radius: 20px;
