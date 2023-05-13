@@ -1,4 +1,5 @@
 .select {
+    position: relative;
     box-sizing: border-box;
     font-family: 'Nunito';
     font-style: normal;
@@ -18,4 +19,57 @@
     background: transparent;
     border: 1px solid #FFFFFF;
     cursor: pointer;
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+        width: 12px;
+        height: 8px;
+        transition: transform 0.5s;
+
+    }
+
+    &.active {
+        .select__arrow {
+            transform: rotateX(180deg);
+        }
+
+        .select__options {
+            opacity: 1;
+            bottom: calc(10px - 200%);
+            pointer-events: all;
+        }
+    }
+
+    &__options {
+        padding-block: 10px;
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        left: 5px;
+        right: 5px;
+        border: 1px solid white;
+        border-top: none;
+        border-radius: 5px;
+        transition: all 0.5s;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        pointer-events: none;
+        align-items: center;
+    }
+
+    &__option {
+
+        &:hover,
+        &--current {
+            text-decoration: underline;
+        }
+    }
+
+    path {
+        fill: white;
+    }
 }

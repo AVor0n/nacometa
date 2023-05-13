@@ -38,9 +38,17 @@
         letter-spacing: 0.1px;
     }
 
-    &__lang-select{
+    &__lang-select {
         color: black;
         border-color: black;
         width: fit-content;
+
+        .select__options {
+            border-color: black;
+        }
+
+        path {
+            fill: black;
+        }
     }
 }

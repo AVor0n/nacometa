@@ -120,6 +120,7 @@ table {
 }
 
 .select {
+  position: relative;
   box-sizing: border-box;
   font-family: "Nunito";
   font-style: normal;
@@ -138,6 +139,46 @@ table {
   background: transparent;
   border: 1px solid #FFFFFF;
   cursor: pointer;
+}
+.select__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  width: 12px;
+  height: 8px;
+  transition: transform 0.5s;
+}
+.select.active .select__arrow {
+  transform: rotateX(180deg);
+}
+.select.active .select__options {
+  opacity: 1;
+  bottom: calc(10px - 200%);
+  pointer-events: all;
+}
+.select__options {
+  padding-block: 10px;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  left: 5px;
+  right: 5px;
+  border: 1px solid white;
+  border-top: none;
+  border-radius: 5px;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  align-items: center;
+}
+.select__option:hover, .select__option--current {
+  text-decoration: underline;
+}
+.select path {
+  fill: white;
 }
 
 .container {
@@ -475,6 +516,12 @@ html {
   border-color: black;
   width: -moz-fit-content;
   width: fit-content;
+}
+.burger__lang-select .select__options {
+  border-color: black;
+}
+.burger__lang-select path {
+  fill: black;
 }
 
 .leads {
