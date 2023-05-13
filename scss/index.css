@@ -636,6 +636,10 @@ html {
     margin-top: 35px;
   }
 }
+.howto__link {
+  color: #01bafe;
+  text-decoration: none;
+}
 .howto__chart {
   grid-area: chart;
   align-self: center;
@@ -741,10 +745,6 @@ html {
     font-size: 21px;
     line-height: 24px;
   }
-}
-.howto__instruction a {
-  color: #01bafe;
-  text-decoration: none;
 }
 .howto__instruction-btns {
   display: flex;

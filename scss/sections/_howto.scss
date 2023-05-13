@@ -42,6 +42,11 @@
         }
     }
 
+    &__link {
+        color: #01bafe;
+        text-decoration: none;
+    }
+
     &__chart {
         grid-area: chart;
         align-self: center;
@@ -146,11 +151,6 @@
                 font-size: 21px;
                 line-height: 24px;
             }
-        }
-
-        a {
-            color: #01bafe;
-            text-decoration: none;
         }
 
         &-btns {
