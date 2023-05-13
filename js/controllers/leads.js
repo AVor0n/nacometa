@@ -46,8 +46,19 @@ const addModalHandler = $cards => {
     }
 };
 
+const addMoreBtnHandler = (data) => {
+    const $moreBtn = document.querySelector('.leads__more');
+    $moreBtn.addEventListener('click', () => {
+        const $dreamContainer = document.createElement('div');
+        $dreamContainer.classList.add('leads__all-dreams');
+        fillCardsContainer($dreamContainer, data);
+        openModal($dreamContainer)
+    })
+};
+
 export const init = async () => {
     const { data } = await getDreamCardsData();
     fillCardsContainer($cardsContainer, getLeadsData(data));
     addModalHandler([...$cardsContainer.children]);
+    addMoreBtnHandler(data);
 };

@@ -60,6 +60,20 @@
             display: flex;
         }
     }
+
+    &__all-dreams {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 90vh;
+        max-width: 60vw;
+        justify-content: center;
+        overflow-y: auto;
+        gap: 30px;
+
+        @include max(660px) {
+            max-width: 90vw;
+        }
+    }
 }
 
 .dream-card {
@@ -144,7 +158,7 @@
 .modal {
     .dream-card {
         overflow-y: auto;
-        max-width: 500px;
+        max-width: 960px;
         max-height: 80vh;
 
         &:hover {
@@ -153,8 +167,14 @@
             filter: none;
         }
 
-        .dream-card__text {
+        &__text {
             @include multiline-text-overflow(initial);
+        }
+    }
+
+    .leads__all-dreams{
+        .dream-card{
+            max-height: initial;
         }
     }
 }
