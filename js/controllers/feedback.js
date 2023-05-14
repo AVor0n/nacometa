@@ -8,7 +8,10 @@ export const init = () => {
 
     let currentSlide = 0;
     let countVisibleCards = getVisibleCardsCount();
-    let touchStartX = 0;
+    let touchStart = {
+        x: 0,
+        y: 0,
+    };
 
     createIndicators();
     updateIndicators();
@@ -26,17 +29,23 @@ export const init = () => {
 
     cardsContainer.addEventListener('touchstart', event => {
         event.preventDefault();
-        touchStartX = event.touches[0].clientX;
+        touchStart.x = event.touches[0].clientX;
+        touchStart.y = event.touches[0].clientY;
     });
 
     cardsContainer.addEventListener('touchend', event => {
-        const touchEndX = event.changedTouches[0].clientX;
-        const diffX = touchStartX - touchEndX;
+        const touchEnd = {
+            x: event.changedTouches[0].clientX,
+            y: event.changedTouches[0].clientY,
+        };
+        const diffX = touchStart.x - touchEnd.x;
         if (Math.abs(diffX) > 50) {
             const direction = diffX > 0 ? 1 : -1;
             const cardIndex = getVisibleCardIndex(cards);
             const nextCardIndex = cardIndex + direction;
             slideTo(nextCardIndex);
+        } else {
+            window.scrollBy(0, touchStart.y - touchEnd.y);
         }
     });
 
