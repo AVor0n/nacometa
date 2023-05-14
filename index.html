@@ -113,36 +113,67 @@
     <section class="section howto" id="howto">
         <h2 class="section__title" data-lang="howTo.title"></h2>
         <div class="howto__content">
-            <div class="howto__chart">
-                <svg viewBox="0 0 700 562" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="367" cy="271" r="270.5" stroke="#03BAFE" stroke-opacity="0.15" />
-                    <circle cx="367.5" cy="271.5" r="227.5" fill="#5ED3FF" fill-opacity="0.4" />
-                    <circle cx="366.5" cy="271.5" r="181.5" fill="#5ED3FF" fill-opacity="0.4" />
-                    <circle cx="366.5" cy="271.5" r="130.5" fill="#03BAFE" fill-opacity="0.2" />
-                    <circle cx="367" cy="271" r="85" fill="#FFA200" />
-                    <image xlink:href="./assets/img/ava-1.png" x="324" y="229" width="85" height="85" />
-                    <image xlink:href="./assets/img/ava-2.png" x="247" y="397" width="57" height="57" />
-                    <image xlink:href="./assets/img/ava-3.png" x="290" y="70" width="57" height="57" />
-                    <image xlink:href="./assets/img/ava-4.png" x="462" y="439" width="57" height="57" />
-                    <circle cx="439.5" cy="408.5" r="15.5" fill="#36B9E9" fill-opacity="0.5" stroke="white" />
-                    <circle cx="373.5" cy="474.5" r="15.5" fill="#36B9E9" fill-opacity="0.5" stroke="white" />
-                    <circle cx="262.5" cy="298.5" r="15.5" fill="#36B9E9" fill-opacity="0.5" stroke="white" />
-                    <circle cx="399.5" cy="218.5" r="15.5" fill="white" fill-opacity="0.5" stroke="white" />
-                    <path
+            <div class="howto__chart chart">
+                <svg viewBox="-4 0 708 568" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="367" cy="271" r="270.5" stroke="#03BAFE" stroke-opacity="0.15"></circle>
+                    <circle cx="367.5" cy="271.5" r="227.5" fill="#5ED3FF" fill-opacity="0.4"></circle>
+                    <circle cx="366.5" cy="271.5" r="181.5" fill="#5ED3FF" fill-opacity="0.4"></circle>
+                    <circle cx="366.5" cy="271.5" r="130.5" fill="#03BAFE" fill-opacity="0.2"></circle>
+                    <circle cx="367" cy="271" r="85" fill="#FFA200"></circle>
+                    <image xlink:href="./assets/img/ava-1.png" x="324" y="229" width="85" height="85"></image>
+                    <image xlink:href="./assets/img/ava-2.png" x="247" y="397" width="57" height="57"></image>
+                    <image xlink:href="./assets/img/ava-3.png" x="290" y="70" width="57" height="57"></image>
+                    <image xlink:href="./assets/img/ava-4.png" x="462" y="439" width="57" height="57"></image>
+                    <circle cx="439.5" cy="408.5" r="15.5" fill="#36B9E9" fill-opacity="0.5" stroke="white"></circle>
+                    <circle cx="373.5" cy="474.5" r="15.5" fill="#36B9E9" fill-opacity="0.5" stroke="white"></circle>
+                    <circle cx="262.5" cy="298.5" r="15.5" fill="#36B9E9" fill-opacity="0.5" stroke="white"></circle>
+                    <circle cx="399.5" cy="218.5" r="15.5" fill="white" fill-opacity="0.5" stroke="white"></circle>
+                    <filter id="shadow">
+                        <feOffset dx="3" dy="3"></feOffset>
+                        <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.4 0 0 0 0 0.4 0 0 0 0 0.4 0 0 0 1 0">
+                        </feColorMatrix>
+                    </filter>
+                    <rect class="chart__shadow animate" x="0" y="300" rx="20" ry="20" width="260" height="85"
+                        fill="white" filter="url(#shadow)">
+                    </rect>
+                    <path class="chart__ballon animate"
                         d="M0 320C0 308.954 8.95431 300 20 300H260V366C260 377.046 251.046 386 240 386H20C8.9543 386 0 377.046 0 366V320Z"
-                        fill="white" />
-                    <path
+                        fill="white"></path>
+                    <rect class="chart__shadow animate" x="400" y="132" rx="20" ry="20" width="272" height="85"
+                        fill="white" filter="url(#shadow)">
+                    </rect>
+                    <path class="chart__ballon animate"
                         d="M400 152C400 140.954 408.954 132 420 132H653C664.046 132 673 140.954 673 152V198C673 209.046 664.046 218 653 218H400V152Z"
-                        fill="white" />
-                    <path
+                        fill="white"></path>
+                    <rect class="chart__shadow animate" x="440" y="321" rx="20" ry="20" width="258" height="85"
+                        fill="white" filter="url(#shadow)">
+                    </rect>
+                    <path class="chart__ballon animate"
                         d="M440 341C440 329.954 448.954 321 460 321H680C691.046 321 700 329.954 700 341V387C700 398.046 691.046 407 680 407H440V341Z"
-                        fill="white" />
-                    <path
+                        fill="white"></path>
+                    <rect class="chart__shadow animate" x="109" y="476" rx="20" ry="20" width="258" height="85"
+                        fill="white" filter="url(#shadow)">
+                    </rect>
+                    <path class="chart__ballon animate"
                         d="M109 496C109 484.954 117.954 476 129 476H369V542C369 553.046 360.046 562 349 562H129C117.954 562 109 553.046 109 542V496Z"
-                        fill="white" />
-                    <path
+                        fill="white"></path>
+                    <rect class="chart__shadow animate" x="173" y="171" rx="20" ry="20" width="185" height="73"
+                        fill="white" filter="url(#shadow)">
+                    </rect>
+                    <path class="chart__ballon animate"
                         d="M173 191C173 179.954 181.954 171 193 171H338C349.046 171 358 179.954 358 191V244H193C181.954 244 173 235.046 173 224V191Z"
-                        fill="white" />
+                        fill="white"></path>
+                    <text x="190" y="200" class="chart__title animate">Представьте,</text>
+                    <text x="190" y="230" class="chart__title animate">что это вы</text>
+                    <text x="420" y="170" class="chart__title animate">€ 40</text>
+                    <text x="420" y="200" class="chart__text animate">4 человека переводят по € 10</text>
+                    <text x="18" y="334" class="chart__title animate">€ 320</text>
+                    <text x="18" y="364" class="chart__text animate">16 людей переводят по € 20</text>
+                    <text x="452" y="358" class="chart__title animate">€ 1 920</text>
+                    <text x="452" y="388" class="chart__text animate">64 человека переводят по € 30</text>
+                    <text x="128" y="512" class="chart__title animate">€ 10 240</text>
+                    <text x="128" y="542" class="chart__text animate">256 людей переводят по € 40</text>
                 </svg>
             </div>
             <div class="howto__stats">
