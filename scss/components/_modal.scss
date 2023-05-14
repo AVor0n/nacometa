@@ -1,12 +1,18 @@
 .modal {
     opacity: 0;
     z-index: 10;
+    margin: 50px;
     transition: all 0.3s;
     display: flex;
     place-items: center;
 
     @include max(660px) {
-        padding: 10px;
+        margin: 30px;
+        border-radius: 10px;
+    }
+
+    @include max(660px) {
+        margin: 10px;
         border-radius: 10px;
     }
 

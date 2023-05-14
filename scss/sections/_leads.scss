@@ -65,12 +65,16 @@
         display: flex;
         flex-wrap: wrap;
         max-height: 90vh;
-        max-width: 60vw;
+        max-width: 1000px;
         justify-content: center;
         overflow-y: auto;
         gap: 30px;
 
-        @include max(660px) {
+        @include max(1280px) {
+            max-width: 70vw;
+        }
+
+        @include max(960px) {
             max-width: 90vw;
         }
     }
@@ -158,8 +162,16 @@
 .modal {
     .dream-card {
         overflow-y: auto;
-        max-width: 960px;
+        max-width: 1000px;
         max-height: 80vh;
+
+        @include max(1280px) {
+            max-width: 70vw;
+        }
+
+        @include max(960px) {
+            max-width: 90vw;
+        }
 
         &:hover {
             cursor: initial;
@@ -172,8 +184,16 @@
         }
     }
 
-    .leads__all-dreams{
-        .dream-card{
+    .leads__all-dreams {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            width: 0;
+
+        }
+
+        .dream-card {
             max-height: initial;
         }
     }

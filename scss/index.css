@@ -189,13 +189,20 @@ table {
 .modal {
   opacity: 0;
   z-index: 10;
+  margin: 50px;
   transition: all 0.3s;
   display: flex;
   place-items: center;
 }
 @media (max-width: 660px) {
   .modal {
-    padding: 10px;
+    margin: 30px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 660px) {
+  .modal {
+    margin: 10px;
     border-radius: 10px;
   }
 }
@@ -631,12 +638,17 @@ html {
   display: flex;
   flex-wrap: wrap;
   max-height: 90vh;
-  max-width: 60vw;
+  max-width: 1000px;
   justify-content: center;
   overflow-y: auto;
   gap: 30px;
 }
-@media (max-width: 660px) {
+@media (max-width: 1280px) {
+  .leads__all-dreams {
+    max-width: 70vw;
+  }
+}
+@media (max-width: 960px) {
   .leads__all-dreams {
     max-width: 90vw;
   }
@@ -730,8 +742,18 @@ html {
 
 .modal .dream-card {
   overflow-y: auto;
-  max-width: 960px;
+  max-width: 1000px;
   max-height: 80vh;
+}
+@media (max-width: 1280px) {
+  .modal .dream-card {
+    max-width: 70vw;
+  }
+}
+@media (max-width: 960px) {
+  .modal .dream-card {
+    max-width: 90vw;
+  }
 }
 .modal .dream-card:hover {
   cursor: initial;
@@ -744,6 +766,13 @@ html {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.modal .leads__all-dreams {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.modal .leads__all-dreams::-webkit-scrollbar {
+  width: 0;
 }
 .modal .leads__all-dreams .dream-card {
   max-height: initial;
