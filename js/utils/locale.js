@@ -13,7 +13,7 @@ const format = (template, ...values) => {
 };
 
 const getCurrentLocale = () => {
-    return localStorage.getItem('locale') ?? window.navigator.language;
+    return localStorage.getItem('locale') ?? window.navigator.language.startsWith('ru') ? 'ru' : 'en';
 };
 
 let currentLocale;
