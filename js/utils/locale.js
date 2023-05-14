@@ -5,7 +5,10 @@ const getValueByPath = (obj, keys) => {
     for (const key of keys) {
         tempObj = tempObj[key];
     }
-    return tempObj;
+    if(!tempObj){
+        console.error(`Пропущена текстовка для ${keys.join('.')}`);
+    };
+    return tempObj
 };
 
 const format = (template, ...values) => {

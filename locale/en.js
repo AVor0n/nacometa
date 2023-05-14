@@ -74,7 +74,7 @@ export const en = {
             mobile: 'Click to attach an image',
         },
         target: 'Fundraising goal',
-        submitBtn: 'Continue',
+        submit: 'Continue',
         progress: {
             title: 'Here will be the name of your dream',
             current: '€ {0} raised',
