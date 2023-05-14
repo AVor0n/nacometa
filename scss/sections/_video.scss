@@ -56,9 +56,18 @@
     }
 
     &__slides {
+        margin: 0;
         display: flex;
         gap: 20px;
-        overflow: hidden;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
 
         @include max(660px) {
             gap: 15px;
@@ -67,6 +76,7 @@
 
     &__slide {
         position: relative;
+        scroll-snap-align: start;
         background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 37.78%);
         border-radius: 10px;
         cursor: pointer;

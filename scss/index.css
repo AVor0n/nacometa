@@ -1261,9 +1261,17 @@ html {
   }
 }
 .video-slider__slides {
+  margin: 0;
   display: flex;
   gap: 20px;
-  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.video-slider__slides::-webkit-scrollbar {
+  width: 0;
 }
 @media (max-width: 660px) {
   .video-slider__slides {
@@ -1272,6 +1280,7 @@ html {
 }
 .video-slider__slide {
   position: relative;
+  scroll-snap-align: start;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 37.78%);
   border-radius: 10px;
   cursor: pointer;
