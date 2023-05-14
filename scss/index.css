@@ -1853,4 +1853,47 @@ html {
   color: #666666;
   margin-top: 50px;
   margin-bottom: 20px;
+}
+
+.social-link--instagram:hover {
+  background: radial-gradient(91.58% 111.72% at 7.03% 94.92%, #E5E5E5 3.23%, #F58A33 20.23%, #EF405C 50%, #B529E6 92.71%);
+}
+.social-link--instagram:hover path {
+  fill: white;
+}
+.social-link--twitter:hover {
+  background: #2bb9eb;
+}
+.social-link--twitter:hover path {
+  fill: white;
+}
+.social-link--telegramm:hover {
+  background: #11aadf;
+}
+.social-link--telegramm:hover path {
+  fill: white;
+}
+.social-link--linkedin:hover {
+  background: black;
+}
+.social-link--linkedin:hover path {
+  fill: white;
+}
+.social-link--facebook:hover {
+  background: #3b5998;
+}
+.social-link--facebook:hover path {
+  fill: white;
+}
+.social-link--watsapp:hover {
+  background: #47de55;
+}
+.social-link--watsapp:hover path {
+  fill: white;
+}
+.social-link--youtube:hover {
+  background: white;
+}
+.social-link--youtube:hover path {
+  fill: red;
 }/*# sourceMappingURL=index.css.map */

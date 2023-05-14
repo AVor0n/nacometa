@@ -139,3 +139,43 @@
         margin-bottom: 20px;
     }
 }
+
+
+@mixin colorIcon($foreground, $background) {
+    path {
+        fill: $foreground;
+    }
+
+    background: $background;
+
+}
+
+.social-link {
+    &--instagram:hover {
+        @include colorIcon(white, radial-gradient(91.58% 111.72% at 7.03% 94.92%, #E5E5E5 3.23%, #F58A33 20.23%, #EF405C 50%, #B529E6 92.71%));
+    }
+
+    &--twitter:hover {
+        @include colorIcon(white, #2bb9eb);
+    }
+
+    &--telegramm:hover {
+        @include colorIcon(white, #11aadf);
+    }
+
+    &--linkedin:hover {
+        @include colorIcon(white, black);
+    }
+
+    &--facebook:hover {
+        @include colorIcon(white, #3b5998);
+    }
+
+    &--watsapp:hover {
+        @include colorIcon(white, #47de55);
+    }
+
+    &--youtube:hover {
+        @include colorIcon( red, white);
+    }
+}
