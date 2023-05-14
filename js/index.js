@@ -12,3 +12,4 @@ import('./controllers/header.js').then(section => section.init());
 import('./controllers/leads.js').then(section => section.init());
 import('./controllers/feedback.js').then(section => section.init());
 import('./controllers/chart.js').then(section => section.init());
+import('./controllers/createDream.js').then(section => section.init());

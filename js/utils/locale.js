@@ -5,10 +5,10 @@ const getValueByPath = (obj, keys) => {
     for (const key of keys) {
         tempObj = tempObj[key];
     }
-    if(!tempObj){
+    if (!tempObj) {
         console.error(`Пропущена текстовка для ${keys.join('.')}`);
-    };
-    return tempObj
+    }
+    return tempObj;
 };
 
 const format = (template, ...values) => {
@@ -37,7 +37,12 @@ export const langs = {
         const $items = document.querySelectorAll('[data-lang]');
         for (const $item of $items) {
             const path = [this.locale, ...$item.dataset.lang.split('.')];
-            $item.textContent = getValueByPath(lang, path);
+            const text = getValueByPath(lang, path);
+            if (text.includes('{0}')) {
+                continue;
+            } else {
+                $item.textContent = text;
+            }
         }
     },
     getTextByKey(key, ...values) {

@@ -10,6 +10,14 @@
   }
 }
 
+@mixin inline-text-overflow($width) {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: $width;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 @mixin multiline-text-overflow($count_lines) {
   display: -webkit-box;
   -webkit-line-clamp: $count_lines;

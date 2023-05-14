@@ -35,6 +35,9 @@
         font-size: 16px;
         line-height: 24px;
         color: #000000;
+        * {
+            @include inline-text-overflow(15ch);
+        }
     }
 
     &__text-all {
@@ -44,5 +47,10 @@
         font-size: 16px;
         line-height: 24px;
         color: #999999;
+        display: inline-flex;
+        gap: 0.5ch;
+        * {
+            @include inline-text-overflow(15ch);
+        }
     }
 }

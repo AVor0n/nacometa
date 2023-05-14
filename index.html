@@ -373,16 +373,18 @@
                         <span class="create-dream__image-label create-dream__image-label--mobile">
                             <label for="create-dream__file" data-lang="createDream.uploadFileLabel.mobile"></label>
                         </span>
-                        <input class="create-dream__file" type="file" id="create-dream__file">
+                        <input class="create-dream__file" type="file" id="create-dream__file" accept="image/*">
                     </div>
                     <div class="create-dream__inputs">
-                        <input type="text" placeholder="Название мечты">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Описание"></textarea>
+                        <input class="create-dream__input" type="text" placeholder="Название мечты" required>
+                        <textarea class="create-dream__description" name="" id="" cols="30" rows="10"
+                            placeholder="Описание" required></textarea>
                         <div class="create-dream__input-with-label">
                             <label for="target" data-lang="createDream.target"></label>
-                            <input type="number" value="5000" id="target">
+                            <input class="create-dream__target-money" type="number" value="5000" id="target" min="1"
+                                required>
                         </div>
-                        <button class="btn btn--secondary btn--s" type="submit" onclick="e => e.prevendDefault();"
+                        <button class="btn btn--secondary btn--s create-dream__submit" type="submit"
                             data-lang="createDream.submit"></button>
                     </div>
                 </form>

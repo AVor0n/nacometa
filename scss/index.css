@@ -74,18 +74,23 @@ table {
   cursor: pointer;
   text-decoration: none;
 }
+.btn:disabled {
+  background: #F2F2F2;
+  border: 1px solid #999999;
+  cursor: not-allowed;
+}
 .btn--primary {
   background: #03BAFE;
   color: white;
 }
-.btn--primary:hover {
+:where(.btn--primary:not(:disabled)):hover {
   background-color: #0196cd;
 }
 .btn--secondary {
   background: #FFA200;
   color: black;
 }
-.btn--secondary:hover {
+:where(.btn--secondary:not(:disabled)):hover {
   background-color: #cc8200;
 }
 .btn--ghost-primary {
@@ -93,7 +98,7 @@ table {
   background: transparent;
   border: 1px solid #03BAFE;
 }
-.btn--ghost-primary:hover {
+:where(.btn--ghost-primary:not(:disabled)):hover {
   background: #EBFAFF;
   border: 1px solid #03BAFE;
 }
@@ -102,7 +107,7 @@ table {
   background: transparent;
   border: 1px solid #FFFFFF;
 }
-.btn--ghost-secondary:hover {
+:where(.btn--ghost-secondary:not(:disabled)):hover {
   color: #0196cd;
   border-color: #0196cd;
 }
@@ -308,6 +313,13 @@ table {
   line-height: 24px;
   color: #000000;
 }
+.progressbar__text-current * {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 15ch;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .progressbar__text-all {
   font-family: "Nunito";
   font-style: normal;
@@ -315,6 +327,15 @@ table {
   font-size: 16px;
   line-height: 24px;
   color: #999999;
+  display: inline-flex;
+  gap: 0.5ch;
+}
+.progressbar__text-all * {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 15ch;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .header {
@@ -1566,6 +1587,7 @@ html {
   }
 }
 .create-dream__image label {
+  cursor: pointer;
   color: #03BAFE;
 }
 @media (max-width: 660px) {
@@ -1590,13 +1612,18 @@ html {
   gap: 20px;
   padding: 20px;
 }
-.create-dream__inputs input {
+.create-dream__input, .create-dream__target-money, .create-dream__description {
   background: #F9F9F9;
   border: 1px solid #E9E9E9;
   border-radius: 5px;
   padding: 10px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
-.create-dream__inputs input::-moz-placeholder {
+.create-dream__input::-moz-placeholder, .create-dream__target-money::-moz-placeholder, .create-dream__description::-moz-placeholder {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
@@ -1604,7 +1631,7 @@ html {
   line-height: 24px;
   color: #737373;
 }
-.create-dream__inputs input::placeholder {
+.create-dream__input::placeholder, .create-dream__target-money::placeholder, .create-dream__description::placeholder {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
@@ -1612,43 +1639,31 @@ html {
   line-height: 24px;
   color: #737373;
 }
-.create-dream__inputs textarea {
-  background: #F9F9F9;
-  border: 1px solid #E9E9E9;
-  border-radius: 5px;
-  padding: 10px;
+.create-dream__description {
   resize: none;
 }
-.create-dream__inputs textarea::-moz-placeholder {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #737373;
+.create-dream__target-money::-webkit-outer-spin-button, .create-dream__target-money::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
-.create-dream__inputs textarea::placeholder {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #737373;
-}
-.create-dream__inputs button {
-  margin-inline: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-@media (max-width: 660px) {
-  .create-dream__inputs button {
-    width: 100%;
-  }
+.create-dream__target-money, .create-dream__target-money:hover, .create-dream__target-money:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
 }
 .create-dream__input-with-label {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.create-dream__submit {
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 660px) {
+  .create-dream__submit {
+    width: 100%;
+  }
 }
 @media (max-width: 1060px) {
   .create-dream__progress {
