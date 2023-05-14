@@ -1,12 +1,13 @@
 import { langs } from '../utils/locale.js';
 import { openModal } from './modal.js';
 import { initProgressBar } from './progressbar.js';
+import { dreamsData } from '../../data/dreams.js';
 
 const $cardTemplate = document.getElementById('leads__dream-card');
 const $cardsContainer = document.querySelector('.leads__dream-cards');
 
 const getDreamCardsData = async () => {
-    return await fetch('../../data/dreams.json').then(data => data.json());
+    return dreamsData;
 };
 
 const getLeadsData = (data, count = 3) => {
@@ -46,14 +47,14 @@ const addModalHandler = $cards => {
     }
 };
 
-const addMoreBtnHandler = (data) => {
+const addMoreBtnHandler = data => {
     const $moreBtn = document.querySelector('.leads__more');
     $moreBtn.addEventListener('click', () => {
         const $dreamContainer = document.createElement('div');
         $dreamContainer.classList.add('leads__all-dreams');
         fillCardsContainer($dreamContainer, data);
-        openModal($dreamContainer)
-    })
+        openModal($dreamContainer);
+    });
 };
 
 export const init = async () => {

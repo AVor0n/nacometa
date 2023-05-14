@@ -1,4 +1,4 @@
-{
+export const dreamsData = {
     "data": [
         {
             "id": 0,
