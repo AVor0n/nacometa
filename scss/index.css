@@ -154,7 +154,7 @@ table {
 }
 .select.active .select__options {
   opacity: 1;
-  bottom: calc(10px - 200%);
+  bottom: -180%;
   pointer-events: all;
 }
 .select__options {
@@ -506,7 +506,7 @@ html {
   background: rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  padding: 30px;
+  padding: 100px 50px;
   gap: 30px;
   pointer-events: none;
   transition: opacity 0.5s;
