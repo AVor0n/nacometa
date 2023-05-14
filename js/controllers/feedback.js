@@ -12,13 +12,16 @@ export const init = () => {
 
     createIndicators();
     updateIndicators();
+    updateBtns();
 
     cardsContainer.addEventListener('wheel', event => {
-        event.preventDefault();
         const direction = Math.sign(event.deltaY);
         const cardIndex = getVisibleCardIndex(cards);
         const nextCardIndex = cardIndex + direction;
-        slideTo(nextCardIndex);
+        if (0 <= nextCardIndex && nextCardIndex <= cards.length - countVisibleCards) {
+            event.preventDefault();
+            slideTo(nextCardIndex);
+        }
     });
 
     cardsContainer.addEventListener('touchstart', event => {
@@ -65,6 +68,11 @@ export const init = () => {
         }
     }
 
+    function updateBtns() {
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide + countVisibleCards >= cards.length;
+    }
+
     function normalizeSlideIndex(index) {
         if (index < 0) return 0;
         if (index > cards.length - countVisibleCards) return cards.length - countVisibleCards;
@@ -76,6 +84,7 @@ export const init = () => {
         const targetCard = cards[currentSlide];
         targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
         updateIndicators();
+        updateBtns();
     }
 
     function getVisibleCardsCount() {

@@ -67,6 +67,10 @@
         border: 1px solid #F9F9F9;
         background-color: white;
 
+        &:disabled {
+            display: none;
+        }
+
         @include max(660px) {
             display: none;
         }

@@ -1085,6 +1085,9 @@ html {
   border: 1px solid #F9F9F9;
   background-color: white;
 }
+.feedback-slider__prev-btn:disabled, .feedback-slider__next-btn:disabled {
+  display: none;
+}
 @media (max-width: 660px) {
   .feedback-slider__prev-btn, .feedback-slider__next-btn {
     display: none;
@@ -1248,7 +1251,7 @@ html {
 }
 .video-slider__slide {
   position: relative;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 37.78%), url(image.png);
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 37.78%);
   border-radius: 10px;
   cursor: pointer;
 }
