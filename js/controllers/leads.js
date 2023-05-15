@@ -1,13 +1,12 @@
 import { langs } from '../utils/locale.js';
 import { openModal } from './modal.js';
 import { initProgressBar } from './progressbar.js';
-import { dreamsData } from '../../data/dreams.js';
 
 const $cardTemplate = document.getElementById('leads__dream-card');
 const $cardsContainer = document.querySelector('.leads__dream-cards');
 
 const getDreamCardsData = async () => {
-    return dreamsData;
+    return (await import(`../../data/dreams.${langs.locale}.js`)).dreamsData;
 };
 
 const getLeadsData = (data, count = 3) => {
@@ -47,14 +46,17 @@ const addModalHandler = $cards => {
     }
 };
 
-const addMoreBtnHandler = data => {
+const openMoreModal = async () => {
+    const $dreamContainer = document.createElement('div');
+    $dreamContainer.classList.add('leads__all-dreams');
+    const {data} = await getDreamCardsData();
+    fillCardsContainer($dreamContainer, data);
+    openModal($dreamContainer);
+};
+
+const addMoreBtnHandler = () => {
     const $moreBtn = document.querySelector('.leads__more');
-    $moreBtn.addEventListener('click', () => {
-        const $dreamContainer = document.createElement('div');
-        $dreamContainer.classList.add('leads__all-dreams');
-        fillCardsContainer($dreamContainer, data);
-        openModal($dreamContainer);
-    });
+    $moreBtn.addEventListener('click', openMoreModal);
 };
 
 export const init = async () => {
@@ -62,4 +64,15 @@ export const init = async () => {
     fillCardsContainer($cardsContainer, getLeadsData(data));
     addModalHandler([...$cardsContainer.children]);
     addMoreBtnHandler(data);
+};
+
+export const dispose = () => {
+    Array.from($cardsContainer.children).forEach(child => {
+        if (child.nodeName !== 'TEMPLATE') {
+            child.remove();
+        }
+    });
+
+    const $moreBtn = document.querySelector('.leads__more');
+    $moreBtn.removeEventListener('click', openMoreModal);
 };
