@@ -1,4 +1,4 @@
-export const init = () => {
+const initSlider = () => {
     const slider = document.querySelector('.video-slider');
     const cardsContainer = slider.querySelector('.video-slider__slides');
     const card = slider.querySelector('.video-slider__slide');
@@ -34,4 +34,25 @@ export const init = () => {
         cardsContainer.scrollBy(-scrollStep, 0);
         updateBtns();
     });
+};
+
+const initVideoBtns = () => {
+    const videos = document.querySelectorAll('.video-slider__slide-video');
+    videos.forEach(video => {
+        video.addEventListener('click', () => {
+            const isPlaying = video.currentTime > 0 && !video.paused && !video.ended;
+            if (isPlaying) {
+                video.classList.remove('active');
+                video.pause();
+            } else {
+                video.classList.add('active');
+                video.play();
+            }
+        });
+    });
+};
+
+export const init = () => {
+    initSlider();
+    initVideoBtns();
 };

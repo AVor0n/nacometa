@@ -81,11 +81,7 @@
         border-radius: 10px;
         cursor: pointer;
 
-        @include max(660px) {
-            height: 370px;
-        }
-
-        &::before {
+        :where(&:not(:has(.active)))::before {
             position: absolute;
             content: '';
             top: 0;
@@ -102,7 +98,16 @@
         }
 
         &-video {
-            height: 100%;
+            width: 252px;
+            height: 423px;
+            background-color: black;
+            border-radius: 10px;
+
+            @include max(660px) {
+                width: 221px;
+                height: 370px;
+                overflow: hidden;
+            }
         }
 
         &-name {

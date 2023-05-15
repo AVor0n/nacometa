@@ -1315,12 +1315,7 @@ html {
   border-radius: 10px;
   cursor: pointer;
 }
-@media (max-width: 660px) {
-  .video-slider__slide {
-    height: 370px;
-  }
-}
-.video-slider__slide::before {
+:where(.video-slider__slide:not(:has(.active)))::before {
   position: absolute;
   content: "";
   top: 0;
@@ -1335,7 +1330,17 @@ html {
   transform: scale(1.3);
 }
 .video-slider__slide-video {
-  height: 100%;
+  width: 252px;
+  height: 423px;
+  background-color: black;
+  border-radius: 10px;
+}
+@media (max-width: 660px) {
+  .video-slider__slide-video {
+    width: 221px;
+    height: 370px;
+    overflow: hidden;
+  }
 }
 .video-slider__slide-name {
   font-family: "Arial";
