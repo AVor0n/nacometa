@@ -8,7 +8,7 @@ export const dreamsData = {
                 "current": 3250,
                 "total": 4300
             },
-            "lastUpdate": "2022-08-01T12:00:00Z"
+            "lastUpdate": "Последний перевод 20 мин назад"
         },
         {
             "id": 1,
@@ -18,7 +18,7 @@ export const dreamsData = {
                 "current": 4820,
                 "total": 5000
             },
-            "lastUpdate": "2022-08-02T10:30:00Z"
+            "lastUpdate": "Последний перевод 10 мин назад"
         },
         {
             "id": 2,
@@ -28,7 +28,7 @@ export const dreamsData = {
                 "current": 2700,
                 "total": 3500
             },
-            "lastUpdate": "2022-08-03T15:20:00Z"
+            "lastUpdate": "Последний перевод 38 мин назад"
         },
         {
             "id": 3,
@@ -38,7 +38,7 @@ export const dreamsData = {
                 "current": 7500,
                 "total": 15000
             },
-            "lastUpdate": "2022-08-04T09:45:00Z"
+            "lastUpdate": "Последний перевод 1 час назад"
         },
         {
             "id": 4,
@@ -48,7 +48,7 @@ export const dreamsData = {
                 "current": 2100,
                 "total": 5000
             },
-            "lastUpdate": "2022-08-05T14:10:00Z"
+            "lastUpdate": "Последний перевод 20 мин назад"
         },
         {
             "id": 5,
@@ -58,7 +58,7 @@ export const dreamsData = {
                 "current": 4630,
                 "total": 10000
             },
-            "lastUpdate": "2022-08-06T11:25:00Z"
+            "lastUpdate": "Последний перевод 25 мин назад"
         },
         {
             "id": 6,
@@ -68,7 +68,7 @@ export const dreamsData = {
                 "current": 8900,
                 "total": 12000
             },
-            "lastUpdate": "2022-08-07T16:40:00Z"
+            "lastUpdate": "Последний перевод 14 мин назад"
         },
         {
             "id": 7,
@@ -78,7 +78,7 @@ export const dreamsData = {
                 "current": 3850,
                 "total": 4000
             },
-            "lastUpdate": "2022-08-08T09:15:00Z"
+            "lastUpdate": "Последний перевод 3 мин назад"
         },
         {
             "id": 8,
@@ -88,7 +88,7 @@ export const dreamsData = {
                 "current": 6310,
                 "total": 12000
             },
-            "lastUpdate": "2022-08-09T13:50:00Z"
+            "lastUpdate": "Последний перевод 8 мин назад"
         },
         {
             "id": 9,
@@ -98,7 +98,7 @@ export const dreamsData = {
                 "current": 800,
                 "total": 1500
             },
-            "lastUpdate": "2022-08-10T08:20:00Z"
+            "lastUpdate": "Последний перевод 56 мин назад"
         }
     ]
 }
