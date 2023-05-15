@@ -56,7 +56,8 @@
         }
 
         @include max(700px) {
-            overflow: hidden;
+            margin-inline: 20px;
+            overflow-x: auto;
             display: flex;
         }
     }
