@@ -1,4 +1,8 @@
 export const en = {
+    locale: {
+        ru: 'Русский',
+        en: 'English',
+    },
     header: {
         title: '€ 355 320 000',
         text: ['Built on the nacometa.com platform', 'Share your dream and get community support!'],
@@ -7,6 +11,7 @@ export const en = {
     },
     nav: {
         links: ['How it works', 'Success stories', 'Opportunities', 'FAQ', 'Contacts'],
+        locale: '{0}',
     },
     leads: {
         title: 'The most active dreamers',

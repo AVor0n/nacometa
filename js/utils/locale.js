@@ -16,10 +16,11 @@ const format = (template, ...values) => {
 };
 
 const getCurrentLocale = () => {
-    return localStorage.getItem('locale') ?? window.navigator.language.startsWith('ru') ? 'ru' : 'en';
+    return localStorage.getItem('locale') ?? (window.navigator.language.startsWith('ru') ? 'ru' : 'en');
 };
 
 let currentLocale;
+let callbacks = [];
 
 export const langs = {
     get lang() {
@@ -33,6 +34,7 @@ export const langs = {
 
         currentLocale = locale;
         localStorage.setItem('locale', currentLocale);
+        callbacks.forEach(callback => callback(locale));
 
         const $items = document.querySelectorAll('[data-lang]');
         for (const $item of $items) {
@@ -49,6 +51,9 @@ export const langs = {
         const path = [this.locale, ...key.split('.')];
         const template = getValueByPath(lang, path);
         return values ? format(template, values) : template;
+    },
+    onChange(callback) {
+        callbacks.push(callback);
     },
     init() {
         this.locale = getCurrentLocale();
